@@ -234,8 +234,15 @@ footer a {
 
 .entries-tab-wrapper {
   background: url("../images/tab-wrapper.png") no-repeat;
+  position: relative;
   background-size: 100% 100%;
   border-bottom: 3px solid #72bfd7; }
+
+.entries-tab-wrapper .background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
 
 .entries-title {
   font-weight: bold;
