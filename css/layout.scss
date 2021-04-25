@@ -1,0 +1,62 @@
+/* 
+
+#05445E
+#189AB4
+#75E6DA
+#D4F1F4
+
+*/
+
+header {
+  background-color: #189ab4;
+  padding: 1rem;
+  color: #fff;
+}
+
+.styled-table {
+  //   box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+  border-collapse: collapse;
+  margin: 1rem auto;
+  width: calc(100% - 2rem);
+  min-width: 800px;
+  max-width: 1024px;
+  & > thead {
+    background-color: #189ab4;
+    color: #fff;
+  }
+  th,
+  td {
+    padding: 1rem 0.75rem;
+    text-align: left;
+  }
+
+  td {
+    .view-demo,
+    .view-code {
+      text-decoration: none;
+      color: white;
+      padding: 0.25rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      border-radius: 0.25rem;
+      vertical-align: middle;
+    }
+    .view-demo {
+      background-color: tomato;
+    }
+    .view-code {
+      background-color: blueviolet;
+    }
+  }
+  & > tbody {
+    & > tr:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+    & > tr:last-of-type {
+      border-bottom: 2px solid #189ab4;
+    }
+    & > tr {
+      border-bottom: 1px solid #dddddd;
+    }
+  }
+}

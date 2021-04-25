@@ -1,0 +1,45 @@
+/* 
+
+#05445E
+#189AB4
+#75E6DA
+#D4F1F4
+
+*/
+header {
+  background-color: #189ab4;
+  padding: 1rem;
+  color: #fff; }
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 1rem auto;
+  width: calc(100% - 2rem);
+  min-width: 800px;
+  max-width: 1024px; }
+  .styled-table > thead {
+    background-color: #189ab4;
+    color: #fff; }
+  .styled-table th,
+  .styled-table td {
+    padding: 1rem 0.75rem;
+    text-align: left; }
+  .styled-table td .view-demo,
+  .styled-table td .view-code {
+    text-decoration: none;
+    color: white;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.25rem;
+    vertical-align: middle; }
+  .styled-table td .view-demo {
+    background-color: tomato; }
+  .styled-table td .view-code {
+    background-color: blueviolet; }
+  .styled-table > tbody > tr:nth-child(even) {
+    background-color: #f3f3f3; }
+  .styled-table > tbody > tr:last-of-type {
+    border-bottom: 2px solid #189ab4; }
+  .styled-table > tbody > tr {
+    border-bottom: 1px solid #dddddd; }
