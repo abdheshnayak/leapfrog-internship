@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -14,378 +14,344 @@
     <title>Tutangle Design</title>
   </head>
   <body>
-    <div class="main-wrapper">
-      <div class="header">
-        <div class="top-header clearfix">
-          <div class="container">
-            <div class="top-header-left left">
-              <div class="logo-wrapper left">
-                <img src="images/tutangle-logo.jpg" alt="Logo of the Site" />
-              </div>
-              <div class="search-bar-wrapper left">
-                <div class="search-bar-left left">
-                  <div class="search-bar-right">
-                    <input
-                      class="search-bar-input"
-                      value="Search by Term, Member, or Entry Title"
-                      type="text"
-                    />
-                  </div>
-                  <img src="images/cross.jpg" alt="" />
-                </div>
-              </div>
-              <div class="search-button-wrapper left">
-                <div class="search-button-left left">
-                  <div class="search-button-right">
-                    <a class="search-button-link" href="#">SEARCH</a>
-                  </div>
-                </div>
+    <header>
+      <div class="header-top clearfix">
+        <div class="container">
+          <img src="/images/tutangle-logo.jpg" class="left" alt="" />
+          <div class="search-box-outer left">
+            <div class="search-box-inner">
+              <input
+                class="left"
+                type="text"
+                placeholder="Search by Term, Member or Title"
+              />
+              <img src="./images/cross.jpg" alt="" class="" />
+            </div>
+          </div>
+          <div class="search-button-outer left">
+            <div class="search-button-left">
+              <div class="search-button-right">
+                <a href="#">SEARCH</a>
               </div>
             </div>
-            <div class="right top-header-right">
-              <div class="user-navigation">
-                <p class="user-name">Joe Burros</p>
-              </div>
-              <div class="user-navigation-options">
+          </div>
+          <div class="nav right">
+            <div class="user-name">Joe Burros</div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom clearfix">
+        <div class="container">
+          <ul class="header-bottom-left">
+            <li><a href="#">Create New Entry</a></li>
+            <li><a href="#">My topic Box</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Invite New Friends</a></li>
+          </ul>
+          <ul class="header-bottom-right">
+            <li class="invite-button">
+              <a href="#" class="active">Topic boxes Invites - 2</a>
+            </li>
+            <li class="request-button"><a href="#">Friends Requests - 0</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="container clearfix">
+        <aside class="left">
+          <div class="option-menu-aside">
+            <div class="title">Recent Searches</div>
+            <ul>
+              <li>
+                <a href="#">Nick Cave and the Bad Seeds</a
+                ><a href="#">
+                  <span
+                    ><img
+                      src="images/icons/download-icon.png"
+                      alt="download" /></span
+                ></a>
+              </li>
+              <li>
+                <a href="#">African Animals</a>
+                <a href="#">
+                  <span
+                    ><img
+                      src="images/icons/download-icon.png"
+                      alt="download" /></span
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="option-menu-aside">
+            <div class="title">Recent Searches</div>
+            <ul>
+              <li>
+                <a href="#">
+                  Different versions of the Tristan and Isolde Prelude</a
+                >
+                <a href="#"
+                  ><span
+                    ><img
+                      src="images/icons/hamburger-icon.png"
+                      alt="hamburger-icon"
+                    />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#"> Music</a>
+                <a href="#"
+                  ><span
+                    ><img
+                      src="images/icons/hamburger-icon.png"
+                      alt="hamburger-icon"
+                    />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#"> Guitar</a>
+                <a href="#"
+                  ><span
+                    ><img
+                      src="images/icons/hamburger-icon.png"
+                      alt="hamburger-icon"
+                    />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#"> Bob cohen</a>
+                <a href="#">
+                  <span
+                    ><img
+                      src="images/icons/hamburger-icon.png"
+                      alt="hamburger-icon"
+                    />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#"> Mark schnack</a>
+                <a href="#">
+                  <span
+                    ><img
+                      src="images/icons/hamburger-icon.png"
+                      alt="hamburger-icon"
+                    />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#"> Jefferson Dickey</a>
+                <a href="#">
+                  <span
+                    ><img
+                      src="images/icons/hamburger-icon.png"
+                      alt="hamburger-icon"
+                    />
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <div class="entries-wrapper">
+          <div class="entries-title">Entries</div>
+          <div class="entries-tab-wrapper clearfix">
+            <div class="all-entries-wrapper left">
+              <div class="tab-title">All entires</div>
+              <div class="tab-wrapper">
                 <ul>
-                  <li><a href="#">Home </a></li>
-                  <li><a href="#">Setting</a></li>
-                  <li><a href="#">Logout </a></li>
+                  <li class="tab-active"><a href="#">All Members</a></li>
+                  <li><a href="#">Friends</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="all-entries-wrapper right">
+              <div class="tab-title">Subscribed</div>
+              <div class="tab-wrapper">
+                <ul>
+                  <li><a href="#">New Entry</a></li>
+                  <li><a href="#">New Comment</a></li>
                 </ul>
               </div>
             </div>
           </div>
-        </div>
-        <div class="bottom-header clearfix">
-          <div class="container">
-            <div class="bottom-header-navbar left">
-              <ul>
-                <li><a href="#">Create New Entry </a></li>
-                <li><a href="#">My Topic Boxes </a></li>
-                <li><a href="#">Friends</a></li>
-                <li><a href="#">Invite New Friends </a></li>
-              </ul>
-            </div>
-            <div class="bottom-header-notifications right">
-              <ul>
-                <li class="active">
-                  <a href="#">Topic Boxes Invite - <span>2</span> </a>
-                </li>
-                <li class="">
-                  <a href="#">Friend Request - <span>0</span></a>
-                </li>
-              </ul>
-            </div>
+          <div class="entries-blog">
+            <ul>
+              <li class="clearfix">
+                <span class="user-photo-wrapper left">
+                  <span class="user-photo">
+                    <img src="images/user1.jpg" alt="user-photo" />
+                  </span>
+                </span>
+                <div class="user-post-info right">
+                  <p class="detail">
+                    <a href="#"
+                      >Day for Night by Francois Truffaut, a ground breaking
+                      film</a
+                    >
+                  </p>
+                  <span class="entry-user-name">
+                    by <a href="#">Alan Coe </a>
+                  </span>
+                  <span class="right-border"></span>
+                  <span class="entry-date">February 10, 2012 </span>
+                  <span class="right-border"></span>
+                  <span class="entry-subscribe"
+                    ><a href="#">Subscribed</a></span
+                  >
+                  <p class="topic-box-left">
+                    From Topic Box:
+                    <span class="favourites"
+                      ><a href="#">My Favorite Movies </a></span
+                    >
+                  </p>
+                </div>
+              </li>
+              <li class="clearfix">
+                <span class="user-photo-wrapper left">
+                  <span class="user-photo">
+                    <img src="images/user2.jpg" alt="user-photo" />
+                  </span>
+                </span>
+                <div class="user-post-info right">
+                  <span class="entry-status">NEW ENTRY!</span>
+                  <p class="detail">
+                    <a href="#">Bade Runner, The Director's Cut</a>
+                  </p>
+                  <span class="entry-user-name">
+                    by <a href="#">Mary Pilot</a>
+                  </span>
+                  <span class="right-border"></span>
+                  <span class="entry-date">February 8 2012</span>
+                  <p class="topic-box-left">
+                    From Topic Box:
+                    <span class="favourites"
+                      ><a href="#">Behind the Scene </a></span
+                    >
+                  </p>
+                </div>
+              </li>
+              <li class="clearfix">
+                <span class="user-photo-wrapper left">
+                  <span class="user-photo">
+                    <img src="images/user3.jpg" alt="user-photo" />
+                  </span>
+                </span>
+                <div class="user-post-info right">
+                  <span class="entry-status">NEW COMMENT!</span>
+                  <p class="detail">
+                    <a href="#">The Best French Restaurant in Chicago?</a>
+                  </p>
+                  <span class="entry-user-name">
+                    by <a href="#">Jim Roy </a>
+                  </span>
+                  <span class="right-border"></span>
+                  <span class="entry-date">February 7 2012</span>
+                  <p class="topic-box-left">
+                    From Topic Box:
+                    <span class="favourites"
+                      ><a href="#">Chicago Restauran Reviews </a></span
+                    >
+                  </p>
+                </div>
+              </li>
+              <li class="clearfix">
+                <span class="user-photo-wrapper left">
+                  <span class="user-photo">
+                    <img src="images/user4.jpg" alt="user-photo" />
+                  </span>
+                </span>
+                <div class="user-post-info right">
+                  <p class="detail">
+                    <a href="#"
+                      >Meaning of Night. Dark Book but incredibly well
+                      written</a
+                    >
+                  </p>
+                  <span class="entry-user-name">
+                    by <a href="#">Alan Coe </a>
+                  </span>
+                  <span class="right-border"></span>
+                  <span class="entry-date">February 7, 2012 </span>
+                  <span class="right-border"></span>
+                  <span class="entry-subscribe"
+                    ><a href="#">Subscribed</a></span
+                  >
+                  <p class="topic-box-left">
+                    From Topic Box:
+                    <span class="favourites"
+                      ><a href="#">Books Read and Books to Read </a></span
+                    >
+                  </p>
+                </div>
+              </li>
+              <li class="clearfix">
+                <span class="user-photo-wrapper left">
+                  <span class="user-photo">
+                    <img src="images/user5.jpg" alt="user-photo" />
+                  </span>
+                </span>
+                <div class="user-post-info right">
+                  <span class="entry-status red">TOPIC BOX INVITE</span>
+                  <p class="detail"><a href="#">Pea Pesto</a></p>
+                  <span class="entry-user-name">
+                    by <a href="#">Marianne Gig</a>
+                  </span>
+                  <span class="right-border"></span>
+                  <span class="entry-date">February 6, 2012 </span>
+                  <p class="topic-box-left">
+                    From Topic Box:
+                    <span class="favourites"
+                      ><a href="#">Favorite Recipes</a></span
+                    >
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
+        </div>
+        <aside class="right">
+          <div class="option-menu-aside">
+            <div class="title">Video Title</div>
+            <ul class="full-width">
+              <li><a href="#"> Overview Of TuTangle </a></li>
+              <li><a href="#"> Searching the Site </a></li>
+              <li><a href="#"> Previous &amp; Saved Searches </a></li>
+              <li><a href="#"> The Topic Box Page </a></li>
+              <li><a href="#"> Creating a Topic Box </a></li>
+              <li><a href="#"> View Topic Box Entries </a></li>
+              <li><a href="#"> Creating an Entry</a></li>
+              <li><a href="#"> Privacy Settings </a></li>
+              <li><a href="#"> Co-Authoring </a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-container-wrapper clearfix">
+          <div class="footer-left left">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Term of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="copyright right">© TuTangle 2013</div>
         </div>
       </div>
-      <div class="main-container">
-        <div class="container clearfix">
-          <div class="left-container left">
-            <div class="main-container-left clearfix">
-              <div class="left-sidebar-wrapper left">
-                <div class="left-sidebar">
-                  <div class="sidebar-title">Recent Searches</div>
-                  <div class="sidebar-content clearfix">
-                    <ul>
-                      <li>
-                        <a href="#">Nick Cave and the Bad Seeds</a
-                        ><a href="#">
-                          <span
-                            ><img
-                              src="images/icons/download-icon.png"
-                              alt="download" /></span
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#">African Animals</a>
-                        <a href="#">
-                          <span
-                            ><img
-                              src="images/icons/download-icon.png"
-                              alt="download" /></span
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="left-sidebar">
-                  <div class="sidebar-title">Recent Searches</div>
-                  <div class="sidebar-content clearfix">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          Different versions of the Tristan and Isolde
-                          Prelude</a
-                        >
-                        <a href="#"
-                          ><span
-                            ><img
-                              src="images/icons/hamburger-icon.png"
-                              alt="hamburger-icon"
-                            />
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#"> Music</a>
-                        <a href="#"
-                          ><span
-                            ><img
-                              src="images/icons/hamburger-icon.png"
-                              alt="hamburger-icon"
-                            />
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#"> Guitar</a>
-                        <a href="#"
-                          ><span
-                            ><img
-                              src="images/icons/hamburger-icon.png"
-                              alt="hamburger-icon"
-                            />
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#"> Bob cohen</a>
-                        <a href="#">
-                          <span
-                            ><img
-                              src="images/icons/hamburger-icon.png"
-                              alt="hamburger-icon"
-                            />
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#"> Mark schnack</a>
-                        <a href="#">
-                          <span
-                            ><img
-                              src="images/icons/hamburger-icon.png"
-                              alt="hamburger-icon"
-                            />
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#"> Jefferson Dickey</a>
-                        <a href="#">
-                          <span
-                            ><img
-                              src="images/icons/hamburger-icon.png"
-                              alt="hamburger-icon"
-                            />
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="entries-wrapper right">
-                <div class="entries-title">Entries</div>
-                <div class="entries-tab-wrapper clearfix">
-                  <div class="all-entries-wrapper left">
-                    <div class="tab-title">All entires</div>
-                    <div class="tab-wrapper">
-                      <ul>
-                        <li class="tab-active"><a href="#">All Members</a></li>
-                        <li><a href="#">Friends</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="all-entries-wrapper right">
-                    <div class="tab-title">Subscribed</div>
-                    <div class="tab-wrapper">
-                      <ul>
-                        <li><a href="#">New Entry</a></li>
-                        <li><a href="#">New Comment</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="entries-blog">
-                  <ul>
-                    <li class="clearfix">
-                      <span class="user-photo-wrapper left">
-                        <span class="user-photo">
-                          <img src="images/user1.jpg" alt="user-photo" />
-                        </span>
-                      </span>
-                      <div class="user-post-info right">
-                        <p class="detail">
-                          <a href="#"
-                            >Day for Night by Francois Truffaut, a ground
-                            breaking film</a
-                          >
-                        </p>
-                        <span class="entry-user-name">
-                          by <a href="#">Alan Coe </a>
-                        </span>
-                        <span class="right-border"></span>
-                        <span class="entry-date">February 10, 2012 </span>
-                        <span class="right-border"></span>
-                        <span class="entry-subscribe"
-                          ><a href="#">Subscribed</a></span
-                        >
-                        <p class="topic-box-left">
-                          From Topic Box:
-                          <span class="favourites"
-                            ><a href="#">My Favorite Movies </a></span
-                          >
-                        </p>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <span class="user-photo-wrapper left">
-                        <span class="user-photo">
-                          <img src="images/user2.jpg" alt="user-photo" />
-                        </span>
-                      </span>
-                      <div class="user-post-info right">
-                        <span class="entry-status">NEW ENTRY!</span>
-                        <p class="detail">
-                          <a href="#">Bade Runner, The Director's Cut</a>
-                        </p>
-                        <span class="entry-user-name">
-                          by <a href="#">Mary Pilot</a>
-                        </span>
-                        <span class="right-border"></span>
-                        <span class="entry-date">February 8 2012</span>
-                        <p class="topic-box-left">
-                          From Topic Box:
-                          <span class="favourites"
-                            ><a href="#">Behind the Scene </a></span
-                          >
-                        </p>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <span class="user-photo-wrapper left">
-                        <span class="user-photo">
-                          <img src="images/user3.jpg" alt="user-photo" />
-                        </span>
-                      </span>
-                      <div class="user-post-info right">
-                        <span class="entry-status">NEW COMMENT!</span>
-                        <p class="detail">
-                          <a href="#">The Best French Restaurant in Chicago?</a>
-                        </p>
-                        <span class="entry-user-name">
-                          by <a href="#">Jim Roy </a>
-                        </span>
-                        <span class="right-border"></span>
-                        <span class="entry-date">February 7 2012</span>
-                        <p class="topic-box-left">
-                          From Topic Box:
-                          <span class="favourites"
-                            ><a href="#">Chicago Restauran Reviews </a></span
-                          >
-                        </p>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <span class="user-photo-wrapper left">
-                        <span class="user-photo">
-                          <img src="images/user4.jpg" alt="user-photo" />
-                        </span>
-                      </span>
-                      <div class="user-post-info right">
-                        <p class="detail">
-                          <a href="#"
-                            >Meaning of Night. Dark Book but incredibly well
-                            written</a
-                          >
-                        </p>
-                        <span class="entry-user-name">
-                          by <a href="#">Alan Coe </a>
-                        </span>
-                        <span class="right-border"></span>
-                        <span class="entry-date">February 7, 2012 </span>
-                        <span class="right-border"></span>
-                        <span class="entry-subscribe"
-                          ><a href="#">Subscribed</a></span
-                        >
-                        <p class="topic-box-left">
-                          From Topic Box:
-                          <span class="favourites"
-                            ><a href="#">Books Read and Books to Read </a></span
-                          >
-                        </p>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <span class="user-photo-wrapper left">
-                        <span class="user-photo">
-                          <img src="images/user5.jpg" alt="user-photo" />
-                        </span>
-                      </span>
-                      <div class="user-post-info right">
-                        <span class="entry-status red">TOPIC BOX INVITE</span>
-                        <p class="detail"><a href="#">Pea Pesto</a></p>
-                        <span class="entry-user-name">
-                          by <a href="#">Marianne Gig</a>
-                        </span>
-                        <span class="right-border"></span>
-                        <span class="entry-date">February 6, 2012 </span>
-                        <p class="topic-box-left">
-                          From Topic Box:
-                          <span class="favourites"
-                            ><a href="#">Favorite Recipes</a></span
-                          >
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="right-container right">
-            <div class="right-sidebar-wrapper">
-              <div class="right-sidebar">
-                <div class="sidebar-title">Video Tutorial</div>
-                <div class="sidebar-content">
-                  <ul>
-                    <li><a href="#"> Overview Of TuTangle </a></li>
-                    <li><a href="#"> Searching the Site </a></li>
-                    <li><a href="#"> Previous & Saved Searches </a></li>
-                    <li><a href="#"> The Topic Box Page </a></li>
-                    <li><a href="#"> Creating a Topic Box </a></li>
-                    <li><a href="#"> View Topic Box Entries </a></li>
-                    <li><a href="#"> Creating an Entry</a></li>
-                    <li><a href="#"> Privacy Settings </a></li>
-                    <li><a href="#"> Co-Authoring </a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer">
-        <div class="container">
-          <div class="footer-container-wrapper clearfix">
-            <div class="footer-left left">
-              <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Term of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Feedback</a></li>
-              </ul>
-            </div>
-            <div class="copyright right">© TuTangle 2013</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </footer>
   </body>
 </html>
