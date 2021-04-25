@@ -233,13 +233,7 @@ footer a {
   padding-right: 16px; }
 
 .entries-tab-wrapper {
-<<<<<<< HEAD
   position: relative;
-=======
-  background: url("../images/tab-wrapper.png") no-repeat;
-  position: relative;
-  background-size: 100% 100%;
->>>>>>> 4d6f38d1fa13041358b856f4083119fc0c64998f
   border-bottom: 3px solid #72bfd7; }
 
 .entries-tab-wrapper .background-image {
