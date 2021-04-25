@@ -10,6 +10,9 @@ header {
   background-color: #189ab4;
   padding: 1rem;
   color: #fff; }
+  header > h1 {
+    max-width: 1024px;
+    margin: 0 auto; }
 
 .styled-table {
   border-collapse: collapse;
