@@ -35,7 +35,11 @@ header {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     border-radius: 0.25rem;
-    vertical-align: middle; }
+    vertical-align: middle;
+    transition: background-color 0.1s linear; }
+    .styled-table td .view-demo:hover,
+    .styled-table td .view-code:hover {
+      background-color: #189ab4; }
   .styled-table td .view-demo {
     background-color: tomato; }
   .styled-table td .view-code {
