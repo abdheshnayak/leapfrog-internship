@@ -3,7 +3,7 @@
   max-width: 938px;
   min-width: 938px; }
 
-.clearfix::after {
+.clearfix:after {
   clear: both;
   content: "";
   display: table; }
@@ -339,5 +339,3 @@ footer a {
 
 .entry-subscribe a {
   color: #7c9531; }
-
-/*  Body Ends */
