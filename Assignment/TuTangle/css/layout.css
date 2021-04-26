@@ -161,7 +161,7 @@
 .main aside:first-child {
   left: 0; }
 
-.main aside .r0 {
+.main aside.r0 {
   right: 0; }
 
 .option-menu-aside .title {
