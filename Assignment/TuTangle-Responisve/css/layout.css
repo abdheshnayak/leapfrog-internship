@@ -1,3 +1,14 @@
+/* 
+************************
+breakpoints used:
+
+medium-screen: 992px
+small-screen-692: 692px
+small-screen: 600px
+very-small-screen-down: 480px
+
+************************
+*/
 .container {
   margin: 0 auto;
   max-width: 938px;
@@ -38,7 +49,6 @@
   margin: 0 22px 0px 6px;
   width: 248px;
   height: 20px;
-  color: #9ba8ae;
   font-size: 12px;
   line-height: 20px; }
 
@@ -112,6 +122,27 @@
   color: white;
   background-color: #7dd8e8; }
 
+.menu-button-outer {
+  cursor: pointer;
+  display: none; }
+
+.menu-button-outer .menu-button {
+  padding: 8px;
+  float: right; }
+
+.menu-button-outer .menu-button:hover {
+  background-color: #7dd8e8; }
+
+.menu-button-outer .menu-button:active {
+  background-color: #f5f5f5; }
+
+.menu-button-outer .menu-icon {
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  float: right; }
+
 .header-bottom-right {
   float: right; }
 
@@ -151,17 +182,17 @@
   display: block;
   margin: 0 auto; }
 
-.main aside {
+.main .aside {
   position: absolute;
   top: 0;
   background-color: #f5f5f5;
   width: 195.2px;
   height: 100%; }
 
-.main aside:first-child {
+.main .aside:first-child {
   left: 0; }
 
-.main aside.r0 {
+.main .aside.r0 {
   right: 0; }
 
 .option-menu-aside .title {
@@ -206,17 +237,17 @@
   top: 13px;
   right: 13px; }
 
-footer {
+.footer {
   min-width: 938px;
   margin-top: 30px;
   background: #717171;
   font-size: 12px; }
 
-footer .container {
+.footer .container {
   color: #fff;
   padding: 19px 2px; }
 
-footer li {
+.footer li {
   background: url(../images/dot.jpg) no-repeat;
   background-position: 0;
   width: auto;
@@ -224,7 +255,7 @@ footer li {
   float: left;
   padding: 0px 7px 0px 10px; }
 
-footer a {
+.footer a {
   color: white; }
 
 .entries-wrapper {
@@ -345,8 +376,14 @@ footer a {
 .entry-subscribe a {
   color: #7c9531; }
 
-@media screen and (max-width: 938px) {
-  .main aside {
+@media screen and (max-width: 992px) {
+  .menu-button-outer {
+    display: block; }
+  .mb-hidden {
+    display: none; }
+  .brand-logo {
+    margin: 8px; }
+  .main .aside {
     position: relative;
     width: 90%;
     margin: 0 auto; }
@@ -356,18 +393,37 @@ footer a {
   .container,
   .header-top,
   .header-bottom,
-  footer {
+  .footer {
     width: 100%;
     max-width: none;
     min-width: 300px; }
-  .container {
-    overflow: auto; }
   .header-bottom-left,
   .header-bottom-right {
-    min-width: 480px;
-    float: left; }
+    float: none; }
+  .header-bottom-left li,
+  .header-bottom-right li {
+    float: none;
+    margin-left: 10%;
+    margin-right: 10%; }
   .header-bottom-right {
     margin-left: 16px; }
+  .main-search-wrapper {
+    float: none;
+    margin: 0 auto;
+    width: 100%; }
+  .main-search-wrapper:before {
+    content: "";
+    display: table;
+    clear: both; }
+  .search-box-outer {
+    width: 85%; }
+  .search-box-inner {
+    padding-right: 32px;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative; }
+  .search-box-inner input {
+    width: 100%; }
   .user-post-info {
     float: none;
     margin-left: 75px;
@@ -391,12 +447,12 @@ footer a {
     padding: 8px;
     display: block; }
   .footer-left a:hover {
-    background-color: grey; }
+    background-color: #777; }
   .copyright {
     float: none;
     text-align: center; } }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
   .all-entries-wrapper {
     width: 80%;
     margin: 0 auto;
@@ -406,19 +462,23 @@ footer a {
     clear: both;
     display: table; } }
 
-@media screen and (max-width: 620px) {
-  .header-top > .container {
-    overflow: hidden; }
+@media screen and (max-width: 692px) {
+  .search-box-outer {
+    width: 80%; }
   .nav {
     float: right;
-    margin-right: 8px; }
+    margin-right: 8px; } }
+
+@media screen and (max-width: 480px) {
+  .search-box-outer {
+    width: 65%; }
   .brand-logo {
-    margin: 8px; }
-  .main-search-wrapper {
-    float: none;
-    margin: 0 auto;
-    width: 24rem; }
-  .main-search-wrapper:before {
-    content: "";
-    display: table;
-    clear: both; } }
+    width: 50%;
+    float: none; }
+  .nav {
+    float: none; }
+  .nav .user-name {
+    float: left; }
+  .nav ul {
+    float: right;
+    line-height: 40px; } }
