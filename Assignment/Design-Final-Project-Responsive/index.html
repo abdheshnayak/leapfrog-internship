@@ -2,11 +2,448 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="./css/layout.scss" />
-    <link rel="stylesheet" href="./css/reset.scss" />
-    <link rel="stylesheet" href="./css/styles.scss" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/common.css" />
   </head>
   <body>
-    hello
+    <header>
+      <div class="container">
+        <div class="hdr-top header-outer clearfix">
+          <div class="content-left">
+            <img
+              class="brand-logo-header"
+              src="./Images/pandora-logo.png"
+              alt=""
+            />
+            <img
+              class="brand-subheading"
+              src="./Images/pandora-subtitle.png"
+              alt=""
+            />
+          </div>
+          <div class="content-right">
+            <ul>
+              <li>
+                <i class="cart icon"></i>
+                <span>0 items ($0.00 in total)</span>
+              </li>
+              <li class="li-vr-line"></li>
+              <li>
+                <span>Checkout</span>
+              </li>
+              <li class="li-vr-line"></li>
+              <li>
+                <i class="icon user-profile"> </i>
+                <span>My Account</span>
+                <i class="icon ltgt-up"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-outer hdr-middle clearfix">
+          <div class="header-middle-wrapper clearfix">
+            <span class="float-l log-in"> Log In: </span>
+            <input
+              class="float-l email-field"
+              type="email"
+              placeholder="E-mail address"
+            />
+            <div class="float-l password-wrapper">
+              <input
+                class="float-l password-field"
+                placeholder="Password"
+                type="password"
+                name=""
+                id=""
+              />
+              <a href="#" class="forget-q float-r custom-link">Forget?</a>
+            </div>
+            <a class="log-in-btn float-l" href="#">Log-in</a>
+            <a class="continue-btn float-l" href="#">Continue as guest</a>
+          </div>
+        </div>
+        <div class="header-outer hdr-bottom clearfix">
+          <div class="float-l">
+            <ul class="main-nav">
+              <li class="float-l">
+                <a href="#">Home</a>
+              </li>
+              <li class="float-l">
+                <a class="plus-after" href="#">Women</a>
+              </li>
+              <li class="float-l">
+                <a class="plus-after" href="#">Men</a>
+              </li>
+              <li class="float-l">
+                <a href="#">Blog</a>
+              </li>
+              <li class="float-l">
+                <a href="#">Contact & Info</a>
+              </li>
+              <li class="float-l">
+                <a href="#">Features</a>
+              </li>
+            </ul>
+          </div>
+          <div class="float-r">
+            <div class="search-box-wrapper clearfix">
+              <i class="search icon float-l mrr-8"></i>
+              <input
+                class="float-r search-box"
+                placeholder="Search here"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="sec-slider clearfix">
+      <img class="slider-main-image" src="./Images/slider-image.png" alt="" />
+      <div class="slider-content-wrapper">
+        <div class="container">
+          <div class="clearfix">
+            <p class="title">Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+          <div class="clearfix">
+            <p class="para">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+              dignissimos aliquam id nobis veniam commodi veritatis hic!
+              <a href="#">Read more +</a>
+            </p>
+          </div>
+          <div class="slider-position-wrapper clearfix">
+            <ul class="slider-position-inner">
+              <li class="float-l">1</li>
+              <li class="float-l active">2</li>
+              <li class="float-l">3</li>
+              <li class="float-l">4</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="welcome-sec clearfix">
+      <div class="container clearfix">
+        <img
+          class="float-l welcome-left"
+          src="./Images/screens-image.png"
+          alt=""
+        />
+        <div class="float-r welcome-right">
+          <img src="./Images/welcome message pandora.png" alt="" />
+          <p class="bold">
+            Congratulations on starting your own e-commerce store!
+          </p>
+          <p>
+            GANYMEDE is an elegant & responsive Shopify theme which dynamically
+            adjusts for all screen sizes and devices. Your shop will look great
+            and will be easy to use on desktop, laptops, tablets and mobile
+            smartphnes.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="featured">
+      <div class="container">
+        <div class="featured-head head-wrap clearfix">
+          <span class="float-l head-title">Featured items </span>
+          <div class="view-more-button">
+            <i class="icon eye float-l mrr-8"></i>
+            <span class="float-l">view more items</span>
+          </div>
+        </div>
+        <div class="featured-collection clearfix">
+          <div class="featured-item">
+            <img class="product-image" src="./Images/products/1.png" alt="" />
+            <p class="product-info">Striped colorfull dress</p>
+            <p class="product-price">$29.99</p>
+          </div>
+
+          <div class="featured-item">
+            <img class="sale" src="./Images/products/sale.png" alt="" />
+            <img class="product-image" src="./Images/products/2.png" alt="" />
+            <p class="product-info">Polka dot light blue blouse</p>
+            <p class="product-price">$13.99 <span>$36.99</span></p>
+          </div>
+
+          <div class="featured-item">
+            <img class="product-image" src="./Images/products/3.png" alt="" />
+            <p class="product-info">Basic sleeveless sweater</p>
+            <p class="product-price">$39.99</p>
+          </div>
+
+          <div class="featured-item">
+            <img class="product-image" src="./Images/products/4.png" alt="" />
+            <p class="product-info">Colorful summer dress</p>
+            <p class="product-price">$26.99</p>
+          </div>
+
+          <div class="featured-item">
+            <img class="product-image" src="./Images/products/5.png" alt="" />
+            <p class="product-info">Black & white polka dot dress</p>
+            <p class="product-price">$29.99</p>
+          </div>
+
+          <div class="featured-item">
+            <img class="product-image" src="./Images/products/6.png" alt="" />
+            <p class="product-info">Elegant sweater with tie</p>
+            <p class="product-price">$59.99</p>
+          </div>
+
+          <div class="featured-item">
+            <img class="product-image" src="./Images/products/7.png" alt="" />
+            <p class="product-info">Basic white foulard</p>
+            <p class="product-price">$9.99</p>
+          </div>
+          <div class="featured-item">
+            <img class="product-image" src="./Images/products/8.png" alt="" />
+            <p class="product-info">White summer dress & hat</p>
+            <p class="product-price">$49.99</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-spc-offr">
+      <div class="container">
+        <div class="head-wrap">
+          <span class="head-title">Special offers</span>
+        </div>
+        <div class="offr-collection">
+          <img src="./Images/sale/1.png" alt="" />
+          <img src="./Images/sale/2.png" alt="" />
+          <img src="./Images/sale/3.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="sec-bottom-main">
+      <div class="container clearfix">
+        <div class="latest float-l">
+          <div class="head-wrap">
+            <span class="head-title"> Latest from news blog </span>
+          </div>
+          <div class="latest-collection">
+            <div class="latest-item">
+              <p class="title">Praesent feugiat felis congue nulla dapibus</p>
+              <div class="clearfix info-cont">
+                <i class="clock icon mrr-8 float-l"></i>
+                <span class="float-l">may 23,2012</span>
+                <i class="seperator icon float-l mrr-8 mrl-8"></i>
+                <i class="chat icon float-l mrr-8"></i>
+                <span class="float-l">6</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                architecto, ipsum odio laudantium, similique delectus blanditiis
+                placeat libero quo eaque voluptatum corrupti ipsa error eum,
+                labore ipsam tenetur minima reprehenderit.
+                <a href="#">Read more</a>
+              </p>
+            </div>
+
+            <div class="latest-item">
+              <p class="title">Praesent feugiat felis congue nulla dapibus</p>
+              <div class="clearfix info-cont">
+                <i class="clock icon mrr-8 float-l"></i>
+                <span class="float-l">may 23,2012</span>
+                <i class="seperator icon float-l mrr-8 mrl-8"></i>
+                <i class="chat icon float-l mrr-8"></i>
+                <span class="float-l">6</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                architecto, ipsum odio laudantium, similique delectus blanditiis
+                placeat libero quo eaque voluptatum corrupti ipsa error eum,
+                labore ipsam tenetur minima reprehenderit.
+                <a href="#">Read more</a>
+              </p>
+            </div>
+
+            <div class="latest-item">
+              <p class="title">Praesent feugiat felis congue nulla dapibus</p>
+              <div class="clearfix info-cont">
+                <i class="clock icon mrr-8 float-l"></i>
+                <span class="float-l">may 23,2012</span>
+                <i class="seperator icon float-l mrr-8 mrl-8"></i>
+                <i class="chat icon float-l mrr-8"></i>
+                <span class="float-l">6</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                architecto, ipsum odio laudantium, similique delectus blanditiis
+                placeat libero quo eaque voluptatum corrupti ipsa error eum,
+                labore ipsam tenetur minima reprehenderit.
+                <a href="#">Read more</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="best-seller float-l">
+          <div class="head-wrap">
+            <span class="head-title">Best sellers</span>
+          </div>
+          <div class="best-seller-collection">
+            <div class="best-sell-item">
+              <img class="sale" src="./Images/sale/sale.png" alt="" />
+              <img class="product-image" src="./Images/sale/4.png" alt="" />
+              <p class="product-price">$13.99</p>
+            </div>
+
+            <div class="best-sell-item">
+              <img class="product-image" src="./Images/sale/5.png" alt="" />
+              <p class="product-price">$59.99</p>
+            </div>
+
+            <div class="best-sell-item">
+              <img class="product-image" src="./Images/sale/6.png" alt="" />
+              <p class="product-price">$29.99</p>
+            </div>
+
+            <div class="best-sell-item">
+              <img class="product-image" src="./Images/sale/7.png" alt="" />
+              <p class="product-price">$39.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-and-contact float-l">
+          <div class="head-wrap">
+            <span class="head-title">About & Contacts</span>
+          </div>
+          <div class="about-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus
+              quae blanditiis eos illum expedita fugit mollitia magni at
+              quaerat. Recusandae distinctio magnam minus dicta. Veniam impedit
+              quis corporis exercitationem tenetur?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              tenetur eum, laborum eaque, est amet ad possimus hic
+            </p>
+            <div class="clearfix pd-8">
+              <i class="icon call mrr-8 float-l"></i>
+              <span class="float-l">7-685-531-2605</span>
+            </div>
+            <div class="clearfix pd-8">
+              <i class="icon mrr-8 message float-l"></i>
+              <span class="float-l">info@planetshine.net</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="clearfix">
+      <div class="container">
+        <div class="footer-navigation float-l">
+          <div class="head-wrap">
+            <span class="head-title">Navigation</span>
+          </div>
+          <ul class="ftr-navigation-body">
+            <li>
+              <a href="#">Homepage</a>
+            </li>
+            <li>
+              <a href="#">Women</a>
+            </li>
+            <li>
+              <a href="#">Featured</a>
+            </li>
+            <li>
+              <a href="#">News blog</a>
+            </li>
+            <li>
+              <a href="#">Featured</a>
+            </li>
+            <li>
+              <a href="#">contact & info</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-lts-news float-l">
+          <div class="head-wrap">
+            <span class="head-title">Latest tweets</span>
+          </div>
+          <div class="tweets-body">
+            <div class="clearfix">
+              <i class="icon tweets float-l"></i>
+              <p class="float-l">
+                <a href="#">@crasnon</a>
+                sem in felis consequat curss vitae cerat. Ut purus ipsum,
+                laoreet at isaculis non
+                <a href="#">https://t.co/yn0nTSIA</a>
+              </p>
+            </div>
+
+            <div class="clearfix">
+              <i class="icon tweets float-l"></i>
+              <p class="float-l">
+                <a href="#">@crasnon</a>
+                sem in felis consequat curss vitae cerat. Ut purus ipsum,
+                laoreet at isaculis non
+                <a href="#">https://t.co/yn0nTSIA</a>
+              </p>
+            </div>
+
+            <div class="clearfix">
+              <i class="icon tweets float-l"></i>
+              <p class="float-l">
+                <a href="#">@crasnon</a>
+                sem in felis consequat curss vitae cerat. Ut purus ipsum,
+                laoreet at isaculis non
+                <a href="#">https://t.co/yn0nTSIA</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-ltr float-l">
+          <div class="head-wrap">
+            <span class="head-title">Newsletter</span>
+          </div>
+          <div class="news-ltr-body float-l">
+            <p>
+              To subscribe to our newsletter, type in you e-mail address below
+              and press "Enter".
+            </p>
+            <p class="bold">We don't send spam. Ever!</p>
+            <div class="search-wrapper clearfix">
+              <i class="icon message float-l mrr-8"></i>
+              <input class="float-l" type="text" placeholder="search here" />
+            </div>
+          </div>
+        </div>
+
+        <div class="about-us-block float-l">
+          <div class="head-wrap">
+            <span class="head-title">About us</span>
+          </div>
+          <div class="about-us-body float-l">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              itaque eius consequatur unde
+            </p>
+            <div>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+              <i class="icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container"></div>
+    </footer>
   </body>
 </html>

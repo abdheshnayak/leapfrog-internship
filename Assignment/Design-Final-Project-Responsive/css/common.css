@@ -1,0 +1,47 @@
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.container {
+  margin: 0 auto;
+  max-width: 992px; }
+
+.clearfix {
+  clear: both;
+  display: table;
+  content: ""; }
+
+.float-l {
+  float: left; }
+
+.float-r {
+  float: right; }
+
+.mrl-8 {
+  margin-left: 8px; }
+
+.mrr-8 {
+  margin-right: 8px; }
+
+.mrl-16 {
+  margin-left: 16px; }
+
+.mrr-16 {
+  margin-right: 16px; }
+
+.absolute {
+  position: absolute; }
+
+.relative {
+  position: relative; }
+
+.custom-link {
+  text-decoration: none;
+  color: #cc003e; }
+
+.pd-8 {
+  padding: 8px; }
