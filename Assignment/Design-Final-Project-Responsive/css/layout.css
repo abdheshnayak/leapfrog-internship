@@ -251,6 +251,7 @@
   background-image: url(../Images/icons/eye.png); }
 
 .featured-head .view-more-button {
+  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 0px;
@@ -509,3 +510,25 @@ footer > div > div:nth-child(4) {
 
 .about-us-body > div > i:nth-child(12) {
   background-image: url(../Images/cards/6.png); }
+
+.copy-inner {
+  margin: 0 auto; }
+
+.copy-inner span {
+  color: #aaa;
+  float: left;
+  margin: 8px; }
+
+.copy-inner img {
+  float: left; }
+
+.copy-inner img:last-of-type {
+  margin: 8px; }
+
+.copy {
+  padding: 32px;
+  padding-top: 24px; }
+
+.footer-top {
+  background: url(../Images/copy-line-sep.png) no-repeat bottom center;
+  padding-bottom: 32px; }
