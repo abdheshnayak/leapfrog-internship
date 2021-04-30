@@ -10,6 +10,10 @@
   margin: 0 auto;
   max-width: 992px; }
 
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 740px; } }
+
 .clearfix {
   clear: both;
   display: table;
@@ -45,3 +49,19 @@
 
 .pd-8 {
   padding: 8px; }
+
+@media only screen and (max-width: 692px) {
+  .mb-hidden {
+    display: none; } }
+
+.desktop-hidden {
+  display: none; }
+
+@media only screen and (max-width: 692px) {
+  .desktop-hidden {
+    display: block; } }
+
+.clearfix-left {
+  clear: left;
+  display: table;
+  content: ""; }

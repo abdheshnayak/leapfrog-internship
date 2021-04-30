@@ -23,6 +23,15 @@
               alt=""
             />
           </div>
+          <div class="search-box-wrapper small float-r">
+            <i class="search icon float-l mrr-8"></i>
+            <input
+              class="float-r search-box"
+              placeholder="Search here"
+              type="text"
+            />
+          </div>
+
           <div class="content-right">
             <ul>
               <li>
@@ -66,7 +75,7 @@
         </div>
         <div class="header-outer hdr-bottom clearfix">
           <div class="float-l">
-            <ul class="main-nav">
+            <ul class="main-nav mb-hidden">
               <li class="float-l">
                 <a href="#">Home</a>
               </li>
@@ -86,9 +95,27 @@
                 <a href="#">Features</a>
               </li>
             </ul>
+
+            <!-- For Mobile -->
+            <div class="nav-selector desktop-hidden" id="uniform-mobile-menu">
+              <span>Home</span
+              ><select name="mobile-menu" id="mobile-menu">
+                <option value="#">Home</option>
+
+                <option value="#">Women</option>
+
+                <option value="#">Men</option>
+
+                <option value="#">Blog</option>
+
+                <option value="#">Contact & Info</option>
+
+                <option value="#">Features</option>
+              </select>
+            </div>
           </div>
           <div class="float-r">
-            <div class="search-box-wrapper clearfix">
+            <div class="search-box-wrapper large clearfix">
               <i class="search icon float-l mrr-8"></i>
               <input
                 class="float-r search-box"
@@ -104,10 +131,10 @@
       <img class="slider-main-image" src="./Images/slider-image.png" alt="" />
       <div class="slider-content-wrapper">
         <div class="container">
-          <div class="clearfix">
+          <div class="clearfix mb-hidden">
             <p class="title">Lorem ipsum dolor sit amet consectetur</p>
           </div>
-          <div class="clearfix">
+          <div class="clearfix mb-hidden">
             <p class="para">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
               dignissimos aliquam id nobis veniam commodi veritatis hic!
@@ -125,7 +152,7 @@
         </div>
       </div>
     </section>
-    <section class="welcome-sec clearfix">
+    <section class="welcome-sec mb-hidden clearfix">
       <div class="container clearfix">
         <img
           class="float-l welcome-left"
@@ -323,13 +350,13 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               tenetur eum, laborum eaque, est amet ad possimus hic
             </p>
-            <div class="clearfix pd-8">
+            <div class="pd-8 float-l">
               <i class="icon call mrr-8 float-l"></i>
-              <span class="float-l">7-685-531-2605</span>
+              <span class="float-l contact-detail">7-685-531-2605</span>
             </div>
-            <div class="clearfix pd-8">
+            <div class="pd-8 float-l">
               <i class="icon mrr-8 message float-l"></i>
-              <span class="float-l">info@planetshine.net</span>
+              <span class="float-l contact-detail">info@planetshine.net</span>
             </div>
           </div>
         </div>
@@ -411,8 +438,8 @@
             </p>
             <p class="bold">We don't send spam. Ever!</p>
             <div class="search-wrapper clearfix">
-              <i class="icon message float-l mrr-8"></i>
-              <input class="float-l" type="text" placeholder="search here" />
+              <i class="icon mail float-l mrr-8"></i>
+              <input class="float-l" type="text" placeholder="Email" />
             </div>
           </div>
         </div>
@@ -427,18 +454,22 @@
               itaque eius consequatur unde
             </p>
             <div>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
-              <i class="icon"></i>
+              <div class="social">
+                <i class="icon youtube"></i>
+                <i class="icon facebook"></i>
+                <i class="icon twitter"></i>
+                <i class="icon un"></i>
+                <i class="icon un2"></i>
+                <i class="icon printest"></i>
+              </div>
+              <div class="cards">
+                <i class="icon visa"></i>
+                <i class="icon master"></i>
+                <i class="icon paypal"></i>
+                <i class="icon un-card"></i>
+                <i class="icon un-card2"></i>
+                <i class="icon google-card"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -448,9 +479,13 @@
           <div class="float-l">
             <span>@2012 Theme "Pandora" by </span>
             <img src="./Images/planetshine.png" alt="" />
-            <i class="icon mrr-8 mrl-8"></i>
-            <span>Ecommerce software by</span>
-            <img src="./Images/spotify.png" alt="" />
+            <i class="icon item-sep mb-hidden mrr-8 mrl-8"></i>
+            <span class="mb-hidden">Ecommerce software by</span>
+            <img
+              class="mb-hidden shopify-logo"
+              src="./Images/spotify.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
