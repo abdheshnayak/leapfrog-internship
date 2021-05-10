@@ -1,0 +1,62 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; }
+
+.carousel-container {
+  width: 500px;
+  overflow: hidden;
+  position: relative; }
+
+.carousel-image-wrapper {
+  display: flex;
+  position: relative;
+  left: -100%; }
+  .carousel-image-wrapper > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.carousel-buttons {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+  .carousel-buttons > .left-rith-btn {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100% - 1rem); }
+    .carousel-buttons > .left-rith-btn > span {
+      width: 3rem;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      opacity: 0.35;
+      cursor: pointer; }
+      .carousel-buttons > .left-rith-btn > span:hover {
+        opacity: 0.5; }
+      .carousel-buttons > .left-rith-btn > span.left {
+        background-image: url(../images/left.svg); }
+      .carousel-buttons > .left-rith-btn > span.right {
+        background-image: url(../images/right.svg); }
+  .carousel-buttons > .indicator-dots-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .carousel-buttons > .indicator-dots-wrapper > span {
+      display: inline-block;
+      height: 0.75rem;
+      width: 0.75rem;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      margin: 0.25rem;
+      box-shadow: inset 0 0 2px black;
+      cursor: pointer; }
+      .carousel-buttons > .indicator-dots-wrapper > span:hover {
+        background-color: #777;
+        box-shadow: inset 0 0 3px #aaa; }
+      .carousel-buttons > .indicator-dots-wrapper > span.active {
+        background-color: yellow;
+        box-shadow: inset 0 0 2px black; }
