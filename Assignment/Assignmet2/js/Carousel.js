@@ -1,14 +1,15 @@
-function Carousel({ carouselId, transitionSpeed, holdInterval }) {
-  var obj = {};
-  obj.carouselId = carouselId;
-  obj.sliderPosition = 0;
-  obj.sliderPosPercent = 0;
-  obj.animSpeed = transitionSpeed || 500;
-  obj.distnation = 0;
-  obj.holdInterval = holdInterval || 5000;
-  obj.running = false;
+function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
+  var that = this;
+  that.carouselId = carouselId;
+  that.sliderPosition = 0;
+  that.sliderPosPercent = 0;
+  that.animSpeed = transitionSpeed || 500;
+  that.distnation = 0;
+  that.holdInterval = holdInterval || 5000;
+  that.running = false;
+  that.autoSlide = autoSlide || false;
 
-  const carouselContainer = document.getElementById(obj.carouselId);
+  const carouselContainer = document.getElementById(that.carouselId);
   const imageWrapper = carouselContainer.querySelector(
     ".carousel-image-wrapper"
   );
@@ -18,28 +19,28 @@ function Carousel({ carouselId, transitionSpeed, holdInterval }) {
   const buttonsWrapper = carouselContainer.querySelector(".carousel-buttons");
 
   //   initializing the functions
-  obj.addCarouselEvents = addCarouselEvents;
-  obj.addUiButtons = addUiButtons;
-  obj.moveSlideWithAnimation = moveSlideWithAnimation;
-  obj.animInterval = animInterval;
-  obj.setDotsActive = setDotsActive;
-  obj.AutoAnimate = AutoAnimate;
-  obj.init = init;
+  that.addCarouselEvents = addCarouselEvents;
+  that.addUiButtons = addUiButtons;
+  that.moveSlideWithAnimation = moveSlideWithAnimation;
+  that.animInterval = animInterval;
+  that.setDotsActive = setDotsActive;
+  that.AutoAnimate = AutoAnimate;
+  that.init = init;
 
-  obj.init();
+  that.init();
 
   //   work as constructor
   function init() {
-    obj.addUiButtons();
-    obj.addCarouselEvents();
-    obj.AutoAnimate();
+    that.addUiButtons();
+    that.addCarouselEvents();
+    if (!that.autoSlide) that.AutoAnimate();
   }
 
   //   add uiButtons to carousel
   function addUiButtons() {
-    obj.buttonsWrapper = document.createElement("div");
-    obj.buttonsWrapper.classList.add("carousel-buttons");
-    obj.buttonsWrapper.innerHTML = `
+    that.buttonsWrapper = document.createElement("div");
+    that.buttonsWrapper.classList.add("carousel-buttons");
+    that.buttonsWrapper.innerHTML = `
     <div class="left-rith-btn">
       <span class="left"></span>
       <span class="right"></span>
@@ -55,22 +56,22 @@ function Carousel({ carouselId, transitionSpeed, holdInterval }) {
 
     indicatorDotsWrapper.querySelector("span").classList.add("active");
 
-    obj.buttonsWrapper.appendChild(indicatorDotsWrapper);
-    carouselContainer.appendChild(obj.buttonsWrapper);
+    that.buttonsWrapper.appendChild(indicatorDotsWrapper);
+    carouselContainer.appendChild(that.buttonsWrapper);
   }
 
   //   add events to button
   function addCarouselEvents() {
-    var leftSlderButton = obj.buttonsWrapper.querySelector(".left");
-    var rightSlidderButton = obj.buttonsWrapper.querySelector(".right");
+    var leftSlderButton = that.buttonsWrapper.querySelector(".left");
+    var rightSlidderButton = that.buttonsWrapper.querySelector(".right");
 
     leftSlderButton.addEventListener("click", (e) => {
-      obj.moveSlideWithAnimation(obj.sliderPosition - 1, obj);
+      that.moveSlideWithAnimation(that.sliderPosition - 1, obj);
     });
     rightSlidderButton.addEventListener("click", (e) => {
-      obj.moveSlideWithAnimation(obj.sliderPosition + 1);
+      that.moveSlideWithAnimation(that.sliderPosition + 1);
     });
-    const indicatorDotsWrapper = obj.buttonsWrapper.querySelectorAll(
+    const indicatorDotsWrapper = that.buttonsWrapper.querySelectorAll(
       ".indicator-dots-wrapper>span"
     );
 
@@ -80,14 +81,14 @@ function Carousel({ carouselId, transitionSpeed, holdInterval }) {
           indicatorDotsWrapper,
           e.target
         );
-        obj.moveSlideWithAnimation(elementIndex);
+        that.moveSlideWithAnimation(elementIndex);
       });
     });
   }
 
   //   clear dotsActive and make the activeIndex active
   function setDotsActive(activeIndex) {
-    const indicatorDotsWrapper = obj.buttonsWrapper.querySelectorAll(
+    const indicatorDotsWrapper = that.buttonsWrapper.querySelectorAll(
       ".indicator-dots-wrapper>span"
     );
 
@@ -100,60 +101,58 @@ function Carousel({ carouselId, transitionSpeed, holdInterval }) {
   }
 
   function AutoAnimate() {
-    // console.log("hello", carouselId);
-    if (obj.autoAnim) return;
-    obj.autoAnim = setInterval(() => {
-      obj.moveSlideWithAnimation(obj.sliderPosition + 1);
-    }, obj.holdInterval);
+    if (that.autoAnim) return;
+    that.autoAnim = setInterval(() => {
+      that.moveSlideWithAnimation(that.sliderPosition + 1);
+    }, that.holdInterval);
   }
 
   //   animate the move
   function animInterval() {
-    if (obj.running) return;
-    // console.log(carouselId);
+    if (that.running) return;
 
-    obj.running = true;
+    that.running = true;
 
-    var source = obj.sliderPosition * 100;
-    var dist = obj.distnation * 100;
-    obj.setDotsActive(obj.distnation);
+    var source = that.sliderPosition * 100;
+    var dist = that.distnation * 100;
+    that.setDotsActive(that.distnation);
 
-    obj.animObject = setInterval(() => {
+    that.animObject = setInterval(() => {
       if (source > dist) {
         source -= 1;
         if (source == dist) {
-          obj.sliderPosition = obj.distnation;
-          clearInterval(obj.animObject);
-          obj.running = false;
+          that.sliderPosition = that.distnation;
+          clearInterval(that.animObject);
+          that.running = false;
         }
         imageWrapper.style = "left:-" + source + "%";
       } else {
         source += 1;
         imageWrapper.style = "left:-" + source + "%";
         if (source == dist) {
-          obj.sliderPosition = obj.distnation;
-          clearInterval(obj.animObject);
-          obj.running = false;
+          that.sliderPosition = that.distnation;
+          clearInterval(that.animObject);
+          that.running = false;
         }
         imageWrapper.style = "left:-" + source + "%";
       }
-    }, obj.animSpeed / 100);
+    }, that.animSpeed / 100);
   }
 
   //   distingation slide index required
   function moveSlideWithAnimation(index) {
     if (index < 0 || index >= imagesLength) {
       if (index >= imagesLength) {
-        obj.distnation = 0;
-        obj.animInterval();
+        that.distnation = 0;
+        that.animInterval();
       } else {
-        obj.distnation = imagesLength - 1;
-        obj.animInterval();
+        that.distnation = imagesLength - 1;
+        that.animInterval();
       }
 
       return;
     }
-    obj.distnation = index;
-    obj.animInterval();
+    that.distnation = index;
+    that.animInterval();
   }
 }

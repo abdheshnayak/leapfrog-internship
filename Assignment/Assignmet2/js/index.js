@@ -8,3 +8,8 @@ const y = new Carousel({
   transitionSpeed: 1000,
   holdInterval: 5000,
 });
+const z = new Carousel({
+  carouselId: "carousel-3",
+  transitionSpeed: 1000,
+  autoSlide: true,
+});
