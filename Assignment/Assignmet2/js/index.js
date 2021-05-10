@@ -1,2 +1,10 @@
-var x = new Carousel("carousel-1", 1000);
-var y = new Carousel("carousel-2", 100);
+const x = new Carousel({
+  carouselId: "carousel-1",
+  transitionSpeed: 500,
+  holdInterval: 2000,
+});
+const y = new Carousel({
+  carouselId: "carousel-2",
+  transitionSpeed: 500,
+  holdInterval: 5000,
+});
