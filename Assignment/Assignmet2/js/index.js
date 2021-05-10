@@ -5,6 +5,6 @@ const x = new Carousel({
 });
 const y = new Carousel({
   carouselId: "carousel-2",
-  transitionSpeed: 500,
+  transitionSpeed: 1000,
   holdInterval: 5000,
 });

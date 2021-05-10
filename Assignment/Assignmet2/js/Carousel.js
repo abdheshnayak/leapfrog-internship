@@ -1,5 +1,5 @@
 function Carousel({ carouselId, transitionSpeed, holdInterval }) {
-  const obj = {};
+  var obj = {};
   obj.carouselId = carouselId;
   obj.sliderPosition = 0;
   obj.sliderPosPercent = 0;
