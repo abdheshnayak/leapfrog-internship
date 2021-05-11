@@ -11,5 +11,5 @@ const y = new Carousel({
 const z = new Carousel({
   carouselId: "carousel-3",
   transitionSpeed: 1000,
-  autoSlide: true,
+  autoSlide: false,
 });

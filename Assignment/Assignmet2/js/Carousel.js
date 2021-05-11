@@ -7,7 +7,7 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
   that.distnation = 0;
   that.holdInterval = holdInterval || 5000;
   that.running = false;
-  that.autoSlide = autoSlide || false;
+  that.autoSlide = autoSlide == false || false;
 
   const carouselContainer = document.getElementById(that.carouselId);
   const imageWrapper = carouselContainer.querySelector(
@@ -107,6 +107,7 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
   }
 
   function AutoAnimate() {
+    if (that.autoSlide) return;
     if (that.autoAnim) return;
     that.autoAnim = setInterval(() => {
       that.moveSlideWithAnimation(that.sliderPosition + 1);
