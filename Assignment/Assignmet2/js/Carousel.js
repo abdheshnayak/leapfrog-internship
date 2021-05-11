@@ -66,9 +66,13 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
     var rightSlidderButton = that.buttonsWrapper.querySelector(".right");
 
     leftSlderButton.addEventListener("click", (e) => {
+      clearInterval(that.autoAnim);
+      that.autoAnim = null;
       that.moveSlideWithAnimation(that.sliderPosition - 1);
     });
     rightSlidderButton.addEventListener("click", (e) => {
+      clearInterval(that.autoAnim);
+      that.autoAnim = null;
       that.moveSlideWithAnimation(that.sliderPosition + 1);
     });
     const indicatorDotsWrapper = that.buttonsWrapper.querySelectorAll(
@@ -81,6 +85,8 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
           indicatorDotsWrapper,
           e.target
         );
+        clearInterval(that.autoAnim);
+        that.autoAnim = null;
         that.moveSlideWithAnimation(elementIndex);
       });
     });
@@ -124,6 +130,7 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
           that.sliderPosition = that.distnation;
           clearInterval(that.animObject);
           that.running = false;
+          that.AutoAnimate();
         }
         imageWrapper.style = "left:-" + source + "%";
       } else {
@@ -133,6 +140,7 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
           that.sliderPosition = that.distnation;
           clearInterval(that.animObject);
           that.running = false;
+          that.AutoAnimate();
         }
         imageWrapper.style = "left:-" + source + "%";
       }
