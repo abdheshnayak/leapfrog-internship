@@ -9,6 +9,12 @@
   </head>
   <body>
     <div class="container">
+      <div>
+        <div class="title">Carousel-1</div>
+        <div class="subtitle">Less hold time and fast tansiction speed</div>
+      </div>
+    </div>
+    <div class="container">
       <!-- carousel-1 -->
       <div class="carousel-container" id="carousel-1">
         <div class="carousel-image-wrapper">
@@ -17,7 +23,19 @@
           <img src="./images/3.jpg" alt="Image" />
         </div>
       </div>
+    </div>
 
+    <br />
+    <hr />
+
+    <div class="container">
+      <div>
+        <div class="title">Carousel-2</div>
+        <div class="subtitle">Much hold time with slow transiction speed</div>
+      </div>
+    </div>
+
+    <div class="container">
       <!-- carousel-2 -->
       <div class="carousel-container" id="carousel-2">
         <div class="carousel-image-wrapper">
@@ -28,6 +46,17 @@
       </div>
     </div>
 
+    <br />
+    <hr />
+
+    <div class="container">
+      <div>
+        <div class="title">Carousel-3</div>
+        <div class="subtitile">
+          No auto slide with average transiction speed
+        </div>
+      </div>
+    </div>
     <div class="container">
       <!-- carousel-3 -->
       <div class="carousel-container" id="carousel-3">
@@ -39,6 +68,60 @@
       </div>
     </div>
 
+    <br />
+    <hr />
+    <br />
+
+    <div class="docs">
+      <p class="title">How To Implement</p>
+      <br />
+      <hr>
+      <br>
+      <p class="subtitle">
+        Place this html code into your html file where you want to show the
+        animation.
+      </p>
+      <xmp>
+    <div class="carousel-container" id="carousel-1">
+      <div class="carousel-image-wrapper">
+        <img src="./images/1.jpg" alt="Image" />
+        <img src="./images/2.jpg" alt="Image" />
+        <img src="./images/3.jpg" alt="Image" />
+      </div>
+    </div>
+  </div>    
+</xmp>
+
+      <p class="subtitle">
+        Add your own id of carausel. i.e carousel-1 in example
+      </p>
+      <p class="subtitle">
+        add all images that you need to show at the time of slide
+      </p>
+      <hr>
+      <p class="subtitle">place this code in your javascript</p>
+
+      <xmp
+>
+        const x = new Carousel({
+          carouselId: "carousel-1",
+          transitionSpeed: 500,
+          holdInterval: 2000,
+          autoSlide: false,
+        });
+      </xmp>
+      <p class="subtitle">
+        Provide carauselId, transitionSpeed (if you want to controll speed by
+        your own), holdInterval(if you want to put your own),autoSlide:false (if
+        you want to stop auto slide, which is optional, default value is true)
+      </p>
+      <p class="subtitle">
+        this initialize you carouesl by in this way and that's it.
+      </p>
+    </div>
+
+    <br />
+    <br />
     <!-- Scripts -->
     <script src="./js/constants.js"></script>
     <script src="./js/util.js"></script>

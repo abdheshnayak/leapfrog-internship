@@ -1,4 +1,8 @@
 .container {
-  margin: 0 auto;
+  margin: 1rem auto;
   display: flex;
   justify-content: center; }
+
+xmp {
+  margin: 1rem auto;
+  width: 80%; }
