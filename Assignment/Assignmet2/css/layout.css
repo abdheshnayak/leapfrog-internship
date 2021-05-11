@@ -3,6 +3,6 @@
   display: flex;
   justify-content: center; }
 
-xmp {
-  margin: 1rem auto;
-  width: 80%; }
+.xmpWrapper {
+  width: 80%;
+  margin: 1rem auto; }
