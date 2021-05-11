@@ -119,7 +119,7 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
 
     that.animObject = setInterval(() => {
       if (source > dist) {
-        source -= 1;
+        source -= Math.abs(that.sliderPosition - that.distnation);
         if (source == dist) {
           that.sliderPosition = that.distnation;
           clearInterval(that.animObject);
@@ -127,7 +127,7 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
         }
         imageWrapper.style = "left:-" + source + "%";
       } else {
-        source += 1;
+        source += Math.abs(that.sliderPosition - that.distnation);
         imageWrapper.style = "left:-" + source + "%";
         if (source == dist) {
           that.sliderPosition = that.distnation;
