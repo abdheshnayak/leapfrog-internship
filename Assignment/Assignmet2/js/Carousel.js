@@ -150,6 +150,7 @@ function Carousel({ carouselId, transitionSpeed, holdInterval, autoSlide }) {
 
   //   distingation slide index required
   function moveSlideWithAnimation(index) {
+    if (that.running) return;
     if (index < 0 || index >= imagesLength) {
       if (index >= imagesLength) {
         that.distnation = 0;
