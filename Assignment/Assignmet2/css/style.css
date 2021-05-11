@@ -10,9 +10,12 @@
   margin: 1rem auto; }
 
 xmp {
-  background-color: #eee;
   font-weight: bold;
   line-height: 1.25rem;
   color: green;
   font-size: 1.1rem;
   padding: 0.5rem; }
+
+.xmpWrapper {
+  background-color: #eee;
+  overflow-y: auto; }

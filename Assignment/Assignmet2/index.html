@@ -75,22 +75,23 @@
     <div class="docs">
       <p class="title">How To Implement</p>
       <br />
-      <hr>
-      <br>
+      <hr />
+      <br />
       <p class="subtitle">
         Place this html code into your html file where you want to show the
         animation.
       </p>
-      <xmp>
-    <div class="carousel-container" id="carousel-1">
-      <div class="carousel-image-wrapper">
-        <img src="./images/1.jpg" alt="Image" />
-        <img src="./images/2.jpg" alt="Image" />
-        <img src="./images/3.jpg" alt="Image" />
-      </div>
-    </div>
-  </div>    
+
+      <div class="xmpwrapper">
+        <xmp><div class="carousel-container" id="carousel-1">
+  <div class="carousel-image-wrapper">
+    <img src="./images/1.jpg" alt="Image" />
+    <img src="./images/2.jpg" alt="Image" />
+    <img src="./images/3.jpg" alt="Image" />
+  </div>
+</div>
 </xmp>
+      </div>
 
       <p class="subtitle">
         Add your own id of carausel. i.e carousel-1 in example
@@ -98,18 +99,20 @@
       <p class="subtitle">
         add all images that you need to show at the time of slide
       </p>
-      <hr>
+      <hr />
       <p class="subtitle">place this code in your javascript</p>
 
-      <xmp
->
-        const x = new Carousel({
-          carouselId: "carousel-1",
-          transitionSpeed: 500,
-          holdInterval: 2000,
-          autoSlide: false,
-        });
-      </xmp>
+      <div class="xmpwrapper">
+        <xmp
+>const x = new Carousel({
+  carouselId: "carousel-1",
+  transitionSpeed: 500,
+  holdInterval: 2000,
+  autoSlide: false,
+});
+              </xmp
+        >
+      </div>
       <p class="subtitle">
         Provide carauselId, transitionSpeed (if you want to controll speed by
         your own), holdInterval(if you want to put your own),autoSlide:false (if
@@ -119,12 +122,13 @@
         this initialize you carouesl by in this way and that's it.
       </p>
 
-      <br>
-      <hr>
-      <br>
-      <p class="subtitle">And at last include all the css provided into your code</p>
+      <br />
+      <hr />
+      <br />
+      <p class="subtitle">
+        And at last include all the css provided into your code
+      </p>
     </div>
-
 
     <br />
     <br />
