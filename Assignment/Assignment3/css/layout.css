@@ -1,0 +1,16 @@
+.container {
+  margin: 1rem auto;
+  max-width: 1024px; }
+
+.ball-wrapper {
+  position: relative;
+  border: 2px solid black;
+  width: 80%;
+  height: 30rem;
+  margin: 1rem auto; }
+
+.ball-wrapper > span {
+  position: absolute;
+  display: inline-block;
+  border-radius: 100rem;
+  transform: translate(-50%, -50%); }
