@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://proicons.netlify.app/css/icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/car.css" />
+  </head>
+  <body>
+    <div class="menu" id="menu-splash">
+      <div class="menu-wrapper">
+        <span class="your-score">
+          Your Score:
+          <span id="score-2">0</span>
+        </span>
+        <div class="btn-wrapper">
+          <div class="play" id="play">
+            <i class="far fa-play-circle"></i> Play
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="score-board">
+        <div class="score-board-inner">
+          <b>Score : <span id="score">0</span></b>
+          <b>Time: <b id="time">0</b> Sec</b>
+        </div>
+      </div>
+      <div class="road-outer">
+        <div class="road" id="road-animator">
+          <div class="car-wrapper" id="road"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="left-right">
+        <div>
+          <div class="left" id="left-btn">
+            <i class="fad fa-angle-double-left"></i>
+            A
+          </div>
+          <div class="right" id="right-btn">
+            D
+            <i class="fad fa-angle-double-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/car.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
