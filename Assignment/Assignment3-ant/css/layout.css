@@ -17,7 +17,7 @@
 
 .ball-wrapper > span {
   background-image: url(../images/ant2.png);
-  animation: ant-runner 1s infinite steps(8);
+  animation: ant-runner 0.3s infinite steps(8);
   background-size: 800% 800%;
   position: absolute;
   display: inline-block;

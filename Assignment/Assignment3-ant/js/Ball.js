@@ -102,8 +102,10 @@ function Ball({ boxObject, speed, arrayIndex }) {
 
   function rotate(velocity, angle) {
     const rotatedVelocities = {
-      x: velocity.x * Math.cos(angle) - velocity.y * Math.sin(angle),
-      y: velocity.x * Math.sin(angle) + velocity.y * Math.cos(angle),
+      x: -velocity.x,
+      y: -velocity.y,
+      // x: velocity.x * Math.cos(angle) - velocity.y * Math.sin(angle),
+      // y: velocity.x * Math.sin(angle) + velocity.y * Math.cos(angle),
     };
 
     return rotatedVelocities;
