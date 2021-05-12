@@ -30,6 +30,13 @@ function Ball({ boxObject, speed, arrayIndex }) {
     that.ball.style.left = that.position.x + "px";
     that.ball.style.top = that.position.y + "px";
     that.ball.style.width = that.ball.style.height = that.radius * 2 + "px";
+
+    that.ball.addEventListener("click", (e) => {
+      Clicked += 1;
+      document.getElementById("clicked").innerText = Clicked;
+      e.target.parentElement.removeChild(e.target);
+    });
+
     boxObject.appendChild(that.ball);
     that.startMove(that);
   }

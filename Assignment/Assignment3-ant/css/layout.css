@@ -16,9 +16,13 @@
     background-position: 0% 800%; } }
 
 .ball-wrapper > span {
+  cursor: pointer;
   background-image: url(../images/ant2.png);
   animation: ant-runner 0.3s infinite steps(8);
   background-size: 800% 800%;
   position: absolute;
   display: inline-block;
   transform: translate(-50%, -50%); }
+
+.ball-wrapper > span:hover {
+  filter: drop-shadow(1px 1px 1px grey); }
