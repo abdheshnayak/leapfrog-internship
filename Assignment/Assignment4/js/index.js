@@ -23,7 +23,7 @@ function Game() {
     roadAnimator.classList.add("animate");
     document.getElementById("score").innerText = "0";
 
-    this.mainCar = new Car(2, 85, getCarClass(obj.CARS), this);
+    this.mainCar = new Car(2, 75, getCarClass(obj.CARS), this);
     this.CarList = [];
   }
 
