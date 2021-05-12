@@ -16,6 +16,7 @@
     background-position: 0% 800%; } }
 
 .ball-wrapper > span {
+  user-select: none;
   cursor: pointer;
   background-image: url(../images/ant2.png);
   animation: ant-runner 0.3s infinite steps(8);
