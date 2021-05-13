@@ -10,6 +10,7 @@ function Game() {
   obj.mainCar;
   obj.CarList;
   obj.bullet;
+  obj.bulletCount = 3;
 
   obj.CARS = Array(40)
     .fill(null)
@@ -27,9 +28,11 @@ function Game() {
     this.mainCar = new Car(2, 75, getCarClass(obj.CARS), this);
 
     this.mainCar.car.addEventListener("click", (e) => {
-      if (this.bullet) {
+      if (this.bullet || this.bulletCount <= 0) {
         return;
       }
+      this.bulletCount -= 1;
+
       this.bullet = new Car(this.mainCar.x, 65, "bullet", this);
     });
 
@@ -61,9 +64,10 @@ function Game() {
     } else if (e.key == "d") {
       obj.mainCar.moveYaxis(obj.mainCar, 1);
     } else if (e.key == "u") {
-      if (this.bullet) {
+      if (this.bullet || this.bulletCount <= 0) {
         return;
       }
+      this.bulletCount -= 1;
       this.bullet = new Car(this.mainCar.x, 65, "bullet", this);
     }
   });
@@ -116,6 +120,11 @@ function Game() {
 
   function update(progress) {
     // Update the state of the world for the elapsed time since last render
+    if (progress % 30 == 0) {
+      obj.bulletCount += 1;
+    }
+
+    document.getElementById("bullet-count").innerText = obj.bulletCount;
 
     if (progress % 15 == 0) {
       obj.roadSpeed = (1 - (progress / 15) * 0.15).toFixed(2);
