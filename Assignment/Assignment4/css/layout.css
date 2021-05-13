@@ -105,7 +105,8 @@
 
 .menu .btn-wrapper {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0 auto !important; }
 
 .menu .play {
   cursor: pointer;
@@ -120,6 +121,26 @@
 
 .menu .play:hover {
   background-color: #043aa6; }
+
+.menu .rules {
+  background-color: #eee;
+  padding: 0.5rem;
+  padding-top: 0;
+  padding-left: 1.75rem; }
+
+.menu .rules .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: inline-block;
+  color: #1c50b9;
+  padding: 0.5rem;
+  padding-left: 0; }
+
+.menu .rules .rules-body {
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; }
 
 .hide {
   display: none !important; }

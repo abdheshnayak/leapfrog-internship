@@ -100,7 +100,7 @@ function Car(x, y, carDesign, MainObj) {
       car.car.classList.add(
         "car",
         "enemy-car",
-        "car-" + (Math.floor(Math.random() * 10) + 1)
+        "car-" + (Math.floor(Math.random() * 40) + 1)
       );
 
       var score = document.getElementById("score");
