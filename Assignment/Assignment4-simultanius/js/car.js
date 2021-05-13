@@ -38,9 +38,9 @@ function Car(x, y, carDesign, MainObj) {
 
     that.car = car;
 
-    console.log(MainObj.MainDom);
+    // console.log(MainObj.MainDom);
     var road = MainObj.MainDom.querySelector(".road-cont");
-    console.log(road);
+    // console.log(road);
 
     road.appendChild(car);
   };
