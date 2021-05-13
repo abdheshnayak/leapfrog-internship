@@ -1,6 +1,7 @@
-function Game() {
+function Game({ id, left, right, up }) {
   var obj = this;
 
+  obj.MainDom = document.getElementById(id);
   obj.startAnimating = startAnimating;
   obj.putCar = putCar;
   obj.update = update;
@@ -23,10 +24,12 @@ function Game() {
   function init() {
     roadAnimator.classList.remove("animate");
     roadAnimator.classList.add("animate");
-    document.getElementById("background").classList.remove("animate");
-    document.getElementById("background").classList.add("animate");
 
-    document.getElementById("score").innerText = "0";
+    this.MainDom.querySelector(".background").classList.remove("animate");
+
+    this.MainDom.querySelector(".background").classList.add("animate");
+
+    this.MainDom.querySelector(".score").innerText = "0";
 
     this.mainCar = new Car(2, 75, getCarClass(obj.CARS), this);
 
@@ -43,7 +46,7 @@ function Game() {
     this.CarList = [];
   }
 
-  document.getElementById("left-btn").addEventListener(
+  this.MainDom.querySelector(".left-btn").addEventListener(
     "click",
     (e) => {
       if (this.mainCar.car.classList.contains("crash")) return;
@@ -51,7 +54,7 @@ function Game() {
     },
     obj
   );
-  document.getElementById("right-btn").addEventListener(
+  this.MainDom.querySelector(".right-btn").addEventListener(
     "click",
     (e) => {
       if (this.mainCar.car.classList.contains("crash")) return;
@@ -63,11 +66,11 @@ function Game() {
   document.addEventListener("keypress", (e) => {
     if (obj.mainCar.car.classList.contains("crash")) return;
 
-    if (e.key == "a") {
+    if (e.key == left) {
       obj.mainCar.moveYaxis(obj.mainCar, -1);
-    } else if (e.key == "d") {
+    } else if (e.key == right) {
       obj.mainCar.moveYaxis(obj.mainCar, 1);
-    } else if (e.key == "u") {
+    } else if (e.key == up) {
       if (this.bullet || this.bulletCount <= 0) {
         return;
       }
@@ -82,7 +85,7 @@ function Game() {
 
   // initialize the timer variables and start the animation
 
-  const roadAnimator = document.getElementById("road-animator");
+  const roadAnimator = obj.MainDom.querySelector(".road-animator");
 
   function putCar() {
     if (obj.CarList.length <= 0) {
@@ -125,7 +128,7 @@ function Game() {
   function update(progress) {
     // Update the state of the world for the elapsed time since last render
 
-    document.getElementById("bullet-count").innerText = obj.bulletCount;
+    obj.MainDom.querySelector(".bullet-count").innerText = obj.bulletCount;
 
     if (progress % 15 == 0) {
       obj.roadSpeed = (1 - (progress / 15) * 0.15).toFixed(2);
@@ -133,7 +136,7 @@ function Game() {
         roadAnimator.style = "animation-duration: " + obj.roadSpeed + "s;";
     }
 
-    document.getElementById("time").innerText = progress;
+    this.MainDom.querySelector(".time").innerText = progress;
     // console.log(progress, 0.25 * (1 + (1 * progress) / 100));
     obj.putCar();
 
@@ -156,9 +159,13 @@ function Game() {
         stop = true;
 
         roadAnimator.classList.remove("animate");
-        document.getElementById("background").classList.remove("animate");
+        obj.MainDom.querySelector(".background").classList.remove("animate");
 
-        document.getElementById("menu-splash").classList.remove("hide");
+        games += 1;
+        if (games > 2) {
+          document.getElementById("menu-splash").classList.remove("hide");
+        }
+
         obj.mainCar.car.classList.add("crash");
 
         // alert(game)
@@ -167,7 +174,7 @@ function Game() {
   }
 
   function startAnimating(fps) {
-    var road = (document.getElementById("road").innerHTML = "");
+    var road = (obj.MainDom.querySelector(".road-cont").innerHTML = "");
     document.getElementById("menu-splash").classList.add("hide");
 
     obj.init();

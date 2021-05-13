@@ -16,14 +16,14 @@ function Car(x, y, carDesign, MainObj) {
     if (percent) {
       return left;
     }
-    const road = document.getElementById("road");
+    var road = MainObj.MainDom.querySelector(".road-cont");
     const fullWidth = road.clientWidth;
     const result = (left * fullWidth) / 100;
     return result;
   };
 
   that.getY = (value) => {
-    const road = document.getElementById("road");
+    var road = MainObj.MainDom.querySelector(".road-cont");
     const fullHeight = road.clientHeight;
     const result = (value * fullHeight) / 100;
     return result;
@@ -38,7 +38,9 @@ function Car(x, y, carDesign, MainObj) {
 
     that.car = car;
 
-    var road = document.getElementById("road");
+    console.log(MainObj.MainDom);
+    var road = MainObj.MainDom.querySelector(".road-cont");
+    console.log(road);
 
     road.appendChild(car);
   };
@@ -103,7 +105,7 @@ function Car(x, y, carDesign, MainObj) {
         "car-" + (Math.floor(Math.random() * 40) + 1)
       );
 
-      var score = document.getElementById("score");
+      var score = MainObj.MainDom.querySelector(".score");
       score.innerText = Number(score.innerText) + 1;
       document.getElementById("score-2").innerText = score.innerText;
 
