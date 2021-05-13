@@ -10,7 +10,7 @@ function Game() {
   obj.mainCar;
   obj.CarList;
   obj.bullet;
-  obj.bulletCount = 3;
+  obj.bulletCount;
 
   obj.CARS = Array(40)
     .fill(null)
@@ -23,6 +23,9 @@ function Game() {
   function init() {
     roadAnimator.classList.remove("animate");
     roadAnimator.classList.add("animate");
+    document.getElementById("background").classList.remove("animate");
+    document.getElementById("background").classList.add("animate");
+
     document.getElementById("score").innerText = "0";
 
     this.mainCar = new Car(2, 75, getCarClass(obj.CARS), this);
@@ -36,6 +39,7 @@ function Game() {
       this.bullet = new Car(this.mainCar.x, 65, "bullet", this);
     });
 
+    this.bulletCount = 3;
     this.CarList = [];
   }
 
@@ -120,9 +124,6 @@ function Game() {
 
   function update(progress) {
     // Update the state of the world for the elapsed time since last render
-    if (progress % 30 == 0) {
-      obj.bulletCount += 1;
-    }
 
     document.getElementById("bullet-count").innerText = obj.bulletCount;
 
@@ -155,6 +156,8 @@ function Game() {
         stop = true;
 
         roadAnimator.classList.remove("animate");
+        document.getElementById("background").classList.remove("animate");
+
         document.getElementById("menu-splash").classList.remove("hide");
         obj.mainCar.car.classList.add("crash");
 

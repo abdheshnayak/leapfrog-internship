@@ -106,6 +106,10 @@ function Car(x, y, carDesign, MainObj) {
       var score = document.getElementById("score");
       score.innerText = Number(score.innerText) + 1;
       document.getElementById("score-2").innerText = score.innerText;
+
+      if (Number(score.innerText) % 15 == 0) {
+        MainObj.bulletCount += 1;
+      }
     }
   };
 

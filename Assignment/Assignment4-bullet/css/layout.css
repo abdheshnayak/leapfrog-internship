@@ -4,6 +4,12 @@
   100% {
     background-position-y: 100%; } }
 
+@keyframes town-move {
+  0% {
+    background-position-y: 0%; }
+  100% {
+    background-position-y: 30rem; } }
+
 .road-outer {
   height: calc(100% - 2rem); }
 
@@ -28,8 +34,12 @@
   position: relative; }
 
 .container {
+  background-size: 50%;
   background: url(../images/download.png);
   background-size: 30rem; }
+
+.container.animate {
+  animation: town-move 2s linear infinite; }
 
 .score-board {
   height: 2rem;
@@ -62,7 +72,7 @@
   justify-content: space-between;
   color: white;
   font-size: 1.2rem;
-  animation: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out; }
 
 .left-right > div > div {
   cursor: pointer;
