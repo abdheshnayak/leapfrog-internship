@@ -87,14 +87,18 @@
 .hide {
   visibility: hidden; }
 
-#menu-splash {
+.menu-splash {
   display: flex;
   justify-content: center;
-  padding: 2rem; }
-  #menu-splash .play-btn {
+  padding: 2rem;
+  user-select: none; }
+  .menu-splash + .menu-splash {
+    padding-top: 0.5rem; }
+  .menu-splash .play-btn {
     background-color: #262aa3;
     color: white;
     padding: 0.5rem;
+    padding-top: 0.6rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     border-radius: 0.25rem;
@@ -102,17 +106,20 @@
     justify-content: center;
     min-width: 5rem;
     cursor: pointer; }
-    #menu-splash .play-btn > span {
+    .menu-splash .play-btn > span {
+      user-select: none;
       text-transform: capitalize;
-      margin-left: 0.5rem; }
-    #menu-splash .play-btn:hover {
+      margin-left: 0.5rem;
+      font-weight: bold; }
+    .menu-splash .play-btn:hover {
       background-color: #141772; }
 
 .rules-wrapper {
   background-color: #eee;
-  max-width: 25rem;
+  max-width: 35rem;
   margin: 0 auto;
-  padding: 2rem; }
+  padding: 2rem;
+  width: 100%; }
   .rules-wrapper .title {
     font-weight: bold;
     font-size: 1.1rem;

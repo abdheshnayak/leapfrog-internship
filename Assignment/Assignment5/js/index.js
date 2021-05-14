@@ -24,7 +24,7 @@ function Game() {
   function init() {
     roadAnimator.classList.remove("animate");
     roadAnimator.classList.add("animate");
-    document.getElementById("menu-splash").classList.add("hide");
+    document.getElementById("play").classList.add("hide");
 
     document.querySelector(".background").innerHTML = "";
     document.querySelector(".background").classList.remove("animate");
@@ -36,23 +36,26 @@ function Game() {
     this.ObsList = [];
     obj.Score = 0;
 
-    document.querySelector(".background").addEventListener(
-      "click",
-      (e) => {
-        if (obj.bird.obs.classList.contains("crash")) {
-          return;
-        } else {
-          obj.bird.velocity.y = 2.5;
-        }
-      },
-      this
-    );
+    const flyEvent = (e) => {
+      if (obj.bird.obs.classList.contains("crash")) {
+        return;
+      } else {
+        obj.bird.velocity.y = 2.5;
+      }
+    };
+
+    document
+      .getElementById("fly-btn")
+      .addEventListener("click", flyEvent, this);
+
+    document
+      .querySelector(".background")
+      .addEventListener("click", flyEvent, this);
   }
 
   document.addEventListener("keypress", (e) => {
     if (obj.bird.obs.classList.contains("crash")) {
       if (e.key == "s") {
-        console.log("hello");
         obj.stop = false;
         obj.startAnimating(100);
       } else {
@@ -80,10 +83,10 @@ function Game() {
       );
     }
 
-    if (obj.ObsList.length > 20) {
-      // console.log("full");
-      return;
-    }
+    // if (obj.ObsList.length > 20) {
+
+    //   return;
+    // }
 
     for (var i = 0; i < obj.ObsList.length; i++) {
       let obs = obj.ObsList[i];
@@ -124,15 +127,13 @@ function Game() {
     obj.ObsList.forEach((obs, index) => {
       obs.run(obs, 0.25 * (3 + (1 * progress) / 10), obj.ObsList);
       if (obs.findCollison(obs, obj.bird)) {
-        console.log(obj.bird.getX(obs.x), obj.bird.getX(obj.bird.x));
-
         // stop the game bird died
         stop = true;
 
         roadAnimator.classList.remove("animate");
         document.querySelector(".background").classList.remove("animate");
 
-        document.getElementById("menu-splash").classList.remove("hide");
+        document.getElementById("play").classList.remove("hide");
 
         obj.bird.obs.classList.add("crash");
 

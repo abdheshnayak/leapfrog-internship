@@ -78,7 +78,6 @@ function Obstacle(x, y, obstacle, obsType, MainObj, notreverse) {
   };
 
   that.moveYaxis = (obs) => {
-    console.log("hello");
     obs.y -= 1;
     obs.obs.style.top = obs.y + "%";
   };
