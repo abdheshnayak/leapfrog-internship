@@ -57,9 +57,9 @@ function Obstacle(x, y, obstacle, obsType, MainObj, notreverse) {
 
     if (
       Math.abs(rect1.x - rect2.x) <
-        Math.abs(rect1.width / 2 + rect2.width / 2) &&
+        Math.abs(rect1.width / 2 + rect2.width / 2) - 5 &&
       Math.abs(rect1.y - rect2.y) <
-        Math.abs(rect1.height / 2 + rect2.height / 2)
+        Math.abs(rect1.height / 2 + rect2.height / 2) - 5
     ) {
       return true;
     }
