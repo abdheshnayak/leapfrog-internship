@@ -95,6 +95,7 @@
   .menu-splash + .menu-splash {
     padding-top: 0.5rem; }
   .menu-splash .play-btn {
+    -webkit-tap-highlight-color: transparent;
     background-color: #262aa3;
     color: white;
     padding: 0.5rem;
