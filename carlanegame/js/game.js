@@ -21,7 +21,7 @@ function Game() {
 
     if (x > 15) {
       obj.mainCar.moveYaxis(obj.mainCar, 1);
-    } else if (x < 15) {
+    } else if (x < -15) {
       obj.mainCar.moveYaxis(obj.mainCar, 3);
     } else {
       obj.mainCar.moveYaxis(obj.mainCar, 2);
