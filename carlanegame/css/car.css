@@ -2,8 +2,7 @@
   display: inline-block;
   background-color: grey;
   position: absolute;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  transition: left 0.1s linear; }
+  transform: translate(-50%, -50%) rotate(-90deg); }
 
 .car.crash {
   filter: invert(1); }
@@ -40,7 +39,8 @@
 .car.car-4 {
   background: url("imgs/cars2.png") no-repeat 58.891% 0.316%;
   width: 77px;
-  height: 39px; }
+  height: 39px;
+  transition: left 0.1s linear; }
 
 .car.car-5 {
   background: url("imgs/cars2.png") no-repeat 78.203% 0.316%;
