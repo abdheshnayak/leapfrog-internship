@@ -105,6 +105,12 @@ function Car(x, y, carDesign, MainObj) {
 
       var score = document.getElementById("score");
       score.innerText = Number(score.innerText) + 1;
+
+      if (
+        Number(localStorage.getItem("high-score")) < Number(score.innerText)
+      ) {
+        localStorage.setItem("high-score", score.innerText);
+      }
       document.getElementById("score-2").innerText = score.innerText;
 
       if (Number(score.innerText) % 15 == 0) {

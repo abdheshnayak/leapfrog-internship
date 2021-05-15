@@ -15,7 +15,7 @@ function Game() {
   function handleOrientation(e) {
     var x = Math.floor(e.gamma); // In degree in the range [-180,180)
 
-    document.getElementById("ori").innerText = x;
+    // document.getElementById("ori").innerText = x;
 
     if (obj.mainCar.car.classList.contains("crash")) return;
 
@@ -142,6 +142,9 @@ function Game() {
 
   function update(progress) {
     // Update the state of the world for the elapsed time since last render
+
+    document.getElementById("high-score").innerHTML =
+      localStorage.getItem("high-score") || 0;
 
     document.getElementById("bullet-count").innerText = obj.bulletCount;
 
