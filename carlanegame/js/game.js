@@ -13,7 +13,7 @@ function Game() {
   obj.bulletCount;
 
   function handleOrientation(e) {
-    var x = e.beta; // In degree in the range [-180,180)
+    var x = e.gamma; // In degree in the range [-180,180)
 
     if (obj.mainCar.car.classList.contains("crash")) return;
 
