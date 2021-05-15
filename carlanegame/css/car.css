@@ -2,7 +2,8 @@
   display: inline-block;
   background-color: grey;
   position: absolute;
-  transform: translate(-50%, -50%) rotate(-90deg); }
+  transform: translate(-50%, -50%) rotate(-90deg);
+  transition: left 0.1s linear; }
 
 .car.crash {
   filter: invert(1); }
