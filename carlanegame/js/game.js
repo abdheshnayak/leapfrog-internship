@@ -15,16 +15,14 @@ function Game() {
   function handleOrientation(e) {
     var x = e.gamma; // In degree in the range [-180,180)
 
-    document.getElementById("ori").innerText = x.toFixed(2);
-
     if (obj.mainCar.car.classList.contains("crash")) return;
 
     if (x > 15) {
-      obj.mainCar.moveYaxis(obj.mainCar, 1);
+      obj.mainCar.moveXaxis(obj.mainCar, 1);
     } else if (x < -15) {
-      obj.mainCar.moveYaxis(obj.mainCar, 3);
+      obj.mainCar.moveXaxis(obj.mainCar, 3);
     } else {
-      obj.mainCar.moveYaxis(obj.mainCar, 2);
+      obj.mainCar.moveXaxis(obj.mainCar, 2);
     }
   }
 
