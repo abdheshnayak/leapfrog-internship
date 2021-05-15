@@ -113,6 +113,11 @@ function Car(x, y, carDesign, MainObj) {
     }
   };
 
+  that.moveYaxis = (car, pos) => {
+    car.x -= pos;
+    car.car.style.left = that.getX(pos) + "px";
+  };
+
   that.moveYaxis = (car, dir) => {
     if (dir < 0 && car.x > 1) {
       car.x -= 1;
