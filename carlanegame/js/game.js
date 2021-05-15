@@ -15,7 +15,7 @@ function Game() {
   function handleOrientation(e) {
     var x = e.gamma; // In degree in the range [-180,180)
 
-    document.getElementById("ori").innerText = x;
+    document.getElementById("ori").innerText = x.toFixed(2);
 
     if (obj.mainCar.car.classList.contains("crash")) return;
 
