@@ -19,11 +19,11 @@ function Game() {
 
     if (obj.mainCar.car.classList.contains("crash")) return;
 
-    if (x < -12) {
+    if (x < -10) {
       obj.mainCar.moveXaxis(obj.mainCar, 1);
-    } else if (x > 12) {
+    } else if (x > 10) {
       obj.mainCar.moveXaxis(obj.mainCar, 3);
-    } else if (x > -8 && x < 8) {
+    } else if (x > -7 && x < 7) {
       obj.mainCar.moveXaxis(obj.mainCar, 2);
     }
   }
