@@ -3,14 +3,16 @@ const fs = require("fs");
 var os = require("os");
 var url = require("url");
 
-const createServer = () => {
+const createServer = (port) => {
   http
     .createServer((req, res) => {
+      // url implemented
       var q = url.parse(req.url, true);
       var filename = "." + q.pathname;
 
       try {
         if (q.pathname != "/" && fs.existsSync(filename)) {
+          // reading file using pathname
           console.log(q.pathname, filename);
           fs.readFile(filename, (err, data) => {
             res.writeHead(200, { "Content-Type": "text/html" });
@@ -20,9 +22,15 @@ const createServer = () => {
         } else {
           fs.readFile("./hello.txt", (err, data) => {
             res.writeHead(200, { "Content-Type": "text/html" });
+
+            // text from hello.txt writen to response
             res.write(data);
+
+            // os modules implemented
             res.write("\nPlatform: " + os.platform());
             res.write("\nArchitecture: " + os.arch());
+
+            // url parser tested
             res.write(
               parseUrl(
                 "http://localhost:8080/default.htm?year=2017&month=february"
@@ -35,9 +43,10 @@ const createServer = () => {
         console.error(err);
       }
     })
-    .listen(8080);
+    .listen(port);
 };
 
+// used to create a file with name hello.txt
 const createFile = () => {
   fs.open("hello.txt", "w", function (err, file) {
     if (err) throw err;
@@ -45,6 +54,7 @@ const createFile = () => {
   });
 };
 
+// used to delete a file with name hello.txt
 const deleteFile = () => {
   fs.unlink("hello.txt", function (err) {
     if (err) throw err;
@@ -52,6 +62,7 @@ const deleteFile = () => {
   });
 };
 
+// // used to rename a file with name hello.txt to hello2.txt
 const renameFile = () => {
   fs.rename("hello.txt", "hello2.txt", function (err) {
     if (err) throw err;
@@ -59,6 +70,7 @@ const renameFile = () => {
   });
 };
 
+// used to write text to a file
 const writeTofile = () => {
   fs.writeFile("hello.txt", "\nHello world!", function (err) {
     if (err) throw err;
@@ -66,13 +78,15 @@ const writeTofile = () => {
   });
 };
 
-const appendFileToCurrent = () => {
-  fs.appendFile("./hello.txt", "\nHello World2!", function (err) {
+// append conntent to current file
+const appendFileToCurrent = (message_text) => {
+  fs.appendFile("./hello.txt", message_text, function (err) {
     if (err) throw err;
     console.log("Saved!");
   });
 };
 
+// url implementation (breaking the url)
 const parseUrl = (adr) => {
   var q = url.parse(adr, true);
 
@@ -91,6 +105,7 @@ const parseUrl = (adr) => {
   });
 };
 
+// exporting all the methods to use in index.js
 module.exports = {
   renameFile,
   writeTofile,
