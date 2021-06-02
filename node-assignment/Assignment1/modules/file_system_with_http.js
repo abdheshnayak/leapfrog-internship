@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 var os = require("os");
 var url = require("url");
+const { request } = require("https");
 
 const createServer = (port) => {
   http
@@ -19,7 +20,7 @@ const createServer = (port) => {
             res.write(data);
             return res.end();
           });
-        } else {
+        } else if (q.pathname == "/") {
           fs.readFile("./hello.txt", (err, data) => {
             res.writeHead(200, { "Content-Type": "text/html" });
 
@@ -38,6 +39,9 @@ const createServer = (port) => {
             );
             return res.end();
           });
+        } else {
+          res.writeHead(404);
+          res.end();
         }
       } catch (err) {
         console.error(err);
